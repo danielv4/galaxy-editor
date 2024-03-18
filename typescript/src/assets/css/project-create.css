@@ -1,0 +1,278 @@
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 142px;
+	height: 40px;
+	margin: -20px 0 0 -71px;
+	background: white;
+	filter: contrast(20);
+}
+
+.dot {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 12px;
+	left: 5px;
+	filter: blur(4px);
+	background: #000;
+	border-radius: 50%;
+	transform: translateX(0);
+	animation: dot 2.8s infinite;
+}
+
+.dots {
+	transform: translateX(0);
+	margin-top: 12px;
+	margin-left: 31px;
+	animation: dots 2.8s infinite;
+}
+
+.dots > span {
+	display: block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin-left: 16px;
+	filter: blur(4px);
+	background: #000;
+	border-radius: 50%;
+}
+
+@keyframes dot {
+	50%
+	{
+		transform: translateX(96px);
+	}
+}
+
+@keyframes dots {
+	50%
+	{
+		transform: translateX(-31px);
+	}
+}
+
+.all-repos{
+    position: relative;
+    padding: 20px;	
+}
+
+.repo-title{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+ 
+.repos{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;	
+}
+ 
+.repo{
+    position: relative;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.repo:hover {
+    background: #fbfbfb;
+}
+
+
+.repo-top{
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 100%;	
+}
+
+.repo-img{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;	
+}
+
+.repo-im{
+    position: relative;
+    width: 18px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;	
+}
+
+.repo-name{
+    line-height: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-left: 10px;
+    color: #0969da;	
+}
+
+.repo-is-private{
+	margin-left: 10px;
+    position: relative;
+    border: 1px solid #d0d7de;
+    line-height: 25px;
+    height: 25px;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.repo-description{
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 10px;
+    position: relative;
+    color: #57606a;
+}
+
+.repo-lang{
+    position: relative;
+    display: flex;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.repo-lang-i{
+    position: relative;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background: blue;	
+}
+
+.repo-lang-t{
+    font-size: 14px;
+    font-family: sans-serif;
+    position: relative;
+    color: #57606a;	
+	line-height: 10px;
+	margin-left:5px;
+}
+
+.project-form-next{
+    position: relative;
+    border: 0px;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    background: #1a73e8;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+	cursor:pointer;
+	-webkit-transition: background 500ms linear;
+    -ms-transition: background 500ms linear;
+    transition: background 500ms linear;
+}
+
+.project-form-next:hover{
+	background: #0058cd;
+}
+
+.project-form-cancel{
+    position: relative;
+    border: 0px;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+	background: none;
+    line-height: 30px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    color: #161616;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+	-webkit-transition: background 500ms linear;
+    -ms-transition: background 500ms linear;
+    transition: background 500ms linear;
+}
+
+.project-form-cancel:hover{
+    background: #efefef;
+}
+
+.project-repo-btns{
+	
+	margin-top:20px;
+}
+
+.project-create-git{
+	position:relative;
+}
+
+.project-create-git-text{
+	position: relative;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.project-create-input{
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background: none;
+    border-radius: 4px;	
+	border: 1px solid #c4c4c4;
+	margin-bottom:10px;
+}
+
+.project-create-input-img{
+    position: relative;
+    width: 56px;
+    height: 56px;	
+}
+
+.project-create-input-im{
+    position: relative;
+    width: 22px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;		
+}
+
+.project-create-input-fp{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0.0;
+    cursor: pointer;	
+}
+
+.project-create-input-d{
+    position: relative;
+    display: flex;	
+}
+
+.project-create-input-text{
+	position:relative;
+	line-height:56px;
+	font-size:14px;
+	font-family:sans-serif;
+}

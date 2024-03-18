@@ -1,0 +1,66 @@
+﻿.edge-content-l {
+	background: #1e1e1e;
+}
+
+.tree-content-v{
+	background: #1e1e1e;		
+}
+
+ul.fancytree-container {
+	background: #1e1e1e;
+}
+
+.presentation-s2{
+    background: rgb(24 24 24);	
+}
+
+.edge-editor{
+	background: rgb(30 30 30);	
+}
+
+.fancytree-title{
+	color:white!important;
+}
+
+.sel-text{
+	color:white;
+}
+
+.main-menu{
+	background: rgb(26 26 26);	
+}
+
+.chrome-tabs .chrome-tab .chrome-tab-content{
+	background: #1e1e1e;	
+}
+
+.chrome-tab-title{
+	color:white!important;
+}
+
+.arrow::after,
+.arrow .arrow::after {
+	border-color: white;
+}
+.arrow.is-triangle::after,
+.arrow .arrow.is-triangle::after {
+	border-color: transparent;
+	border-bottom-color: white;
+}
+.arrow::before,
+.arrow .arrow::before {
+	background-color: white;
+}
+
+.load {
+	border:solid 2px white;
+}
+
+.filter__menu {
+	background: rgb(24 24 24);
+}
+ .filter__option {
+	background: rgb(24 24 24);
+}
+
+

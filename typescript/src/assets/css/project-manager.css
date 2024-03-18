@@ -1,0 +1,35 @@
+
+.sel-i{
+	position:relative;
+	display:flex;
+}
+
+.sel-img{
+	position:relative;
+	width:25px;
+	height:25px;
+}
+
+.sel-im{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 16px;
+	height:16px;
+}
+
+.sel-text{
+    position: relative;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 25px;
+	padding-left:10px;
+}
+
+.sel-placeholder{
+    position: relative;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 30px;	
+}

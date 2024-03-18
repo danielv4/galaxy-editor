@@ -1,0 +1,75 @@
+<html>
+<head>
+<style>
+
+</style>
+</head>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/jquery.fancytree/2/skin-win8/ui.fancytree.min.css" type="text/css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/jquery.fancytree/2/jquery.fancytree-all.min.js" type="text/javascript"></script>
+<h1>Updated</h1>
+<div id="tree"></div>
+
+
+
+<script>
+$(function(){
+
+  window.api.send('readdir', '/');
+  
+  window.api.on('on-readdir-load', (event, args) => {
+  
+	console.log(args);
+		$("#tree").fancytree({
+		  source: args,
+		  activate: function(event, data) {
+			
+			var node = data.node;
+			console.log(node.title);
+			console.log(node.key);
+			//node.setTitle('changed');
+		  },
+		  lazyLoad: function(event, data) {
+
+				var node = data.node;
+				//var path_t = node.key + 	 
+				var dfd = new $.Deferred();
+				data.result = dfd; 
+				console.log(node);
+				
+				window.api.send('readdir', node.key);
+				window.api.on('on-readdir', (event, args) => {
+				
+					console.log(args);
+					
+					// callback
+					dfd.resolve(args);
+				});
+			}
+		});
+	
+	});
+	
+	$("#button1").click(function(event){
+	  var tree = $("#tree").fancytree("getTree"),
+	      node = tree.getActiveNode();
+
+	  alert("Actie node " + node);
+	});
+});
+
+</script>
+</body>
+</html>
